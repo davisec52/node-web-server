@@ -59,6 +59,13 @@ app.get("/bad", (req, res) => {
 	});
 });
 
+app.get("/projects", (req, res) =>{
+	res.render("projects.hbs", {
+		pageTitle: "Portfolio Projects: Javascript, jQuery, Node, React, Mongo",
+		welcomeMsg: "Thank you for giving my projects your time and attention. Please do not hesitate to contact me with questions or for more information."
+	});
+});
+
 app.listen(port, process.env.IP, () => {
 	console.log(`Server running on port ${port}`);
 });
